@@ -26,7 +26,6 @@ defmodule TigerhoodApiWeb.TigerController do
   end
 
   def update(conn, %{"id" => id, "tiger" => tiger_params}) do
-    IO.inspect("Dani gay")
     tiger = Tigers.get_tiger!(id)
 
     with {:ok, %Tiger{} = tiger} <- Tigers.update_tiger(tiger, tiger_params) do

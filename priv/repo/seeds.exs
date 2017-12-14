@@ -9,3 +9,26 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+alias TigerhoodApi.{Tigers.Tiger, Repo}
+
+# We are deleting the data here !!!!!!!>!!<!>!<><>!<
+Repo.all(Tiger)
+|> Enum.each(fn x -> Repo.delete(x) end)
+
+dani_seed = %{ name: "Daniel Antoniazzi Amarante", image: "https://avatars2.githubusercontent.com/u/7462237?s=400&v=4"}
+heck_seed = %{ name: "Fernando Sehnem Heck", image: "https://avatars1.githubusercontent.com/u/3910722?s=400&v=4"}
+matth_seed = %{ name: "Matthias Oliveira de Nunes", image: "https://avatars2.githubusercontent.com/u/6979113?s=400&v=4"}
+
+
+%Tiger{}
+    |> Tiger.changeset(dani_seed)
+    |> Repo.insert!()
+
+%Tiger{}
+    |> Tiger.changeset(heck_seed)
+    |> Repo.insert!()
+
+%Tiger{}
+|> Tiger.changeset(matth_seed)
+|> Repo.insert!()
