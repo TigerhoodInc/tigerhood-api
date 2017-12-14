@@ -13,7 +13,7 @@ config :logger, level: :warn
 config :tigerhood_api, TigerhoodApi.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
-  password: "postgres",
+  password: "matthiashomossexual",
   database: "tigerhood_api_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

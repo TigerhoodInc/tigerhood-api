@@ -2,7 +2,7 @@ version: "2"
 services:
   postgres:
     image: "postgres"
+    ports: 
+      - "5432:5432"
     environment:
-      POSTGRES_PASSWORD: Unseen2015
-      ports: 
-        - 5432:5432
+        POSTGRES_PASSWORD: matthiashomossexual

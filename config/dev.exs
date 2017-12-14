@@ -40,7 +40,7 @@ config :phoenix, :stacktrace_depth, 20
 config :tigerhood_api, TigerhoodApi.Repo,
 adapter: Ecto.Adapters.Postgres,
 username: "postgres",
-password: "Unseen2015",
+password: "matthiashomossexual",
 database: "tigerhood_api_dev",
 hostname: "localhost",
 pool_size: 10
