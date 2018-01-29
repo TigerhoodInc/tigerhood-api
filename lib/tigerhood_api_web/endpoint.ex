@@ -36,6 +36,7 @@ defmodule TigerhoodApiWeb.Endpoint do
     key: "_tigerhood_api_key",
     signing_salt: "R5kuspHg"
 
+  plug(CORSPlug)
   plug TigerhoodApiWeb.Router
 
   @doc """
