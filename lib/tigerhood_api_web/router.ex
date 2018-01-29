@@ -7,6 +7,7 @@ defmodule TigerhoodApiWeb.Router do
 
   scope "/api", TigerhoodApiWeb do
     pipe_through :api
-    resources "/tigers", TigerController, except: [:new, :edit]
+    resources "/tigers", TigerController, only: [:index]
+    resources "/messages", MessageController, only: [:create, :show]
   end
 end

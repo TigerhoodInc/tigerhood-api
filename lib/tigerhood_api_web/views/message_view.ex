@@ -14,6 +14,5 @@ defmodule TigerhoodApiWeb.MessageView do
       %{author: message.author,
       content: message.content}
     end
-  
   end
   
