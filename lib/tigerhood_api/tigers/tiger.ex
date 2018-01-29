@@ -7,6 +7,7 @@ defmodule TigerhoodApi.Tigers.Tiger do
   schema "tigers" do
     field :image, :string
     field :name, :string
+    has_many :message, TigerhoodApi.Messages.Message
 
     timestamps()
   end
