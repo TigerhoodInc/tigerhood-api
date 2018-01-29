@@ -18,7 +18,7 @@ defmodule TigerhoodApi.Tigers do
 
   """
   def list_tigers do
-    Repo.all(Tiger)
+    Repo.all(Tiger) |> Repo.preload(:messages)
   end
 
   @doc """

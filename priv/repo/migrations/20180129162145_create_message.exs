@@ -5,6 +5,8 @@ defmodule TigerhoodApi.Repo.Migrations.CreateMessage do
     create table(:messages) do
       add :author, :string
       add :content, :string
+
+      timestamps()
     end
   end
 end

@@ -10,16 +10,15 @@
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
 
-alias TigerhoodApi.{Tigers.Tiger, Repo}
+alias TigerhoodApi.{Tigers.Tiger, Repo, Messages.Message}
 
 # We are deleting the data here !!!!!!!>!!<!>!<><>!<
 Repo.all(Tiger)
 |> Enum.each(fn x -> Repo.delete(x) end)
 
-dani_seed = %{ name: "Daniel Antoniazzi Amarante", image: "https://avatars2.githubusercontent.com/u/7462237?s=400&v=4"}
-heck_seed = %{ name: "Fernando Sehnem Heck", image: "https://avatars1.githubusercontent.com/u/3910722?s=400&v=4"}
-matth_seed = %{ name: "Matthias Oliveira de Nunes", image: "https://avatars2.githubusercontent.com/u/6979113?s=400&v=4"}
-
+dani_seed = %{ name: "Daniel Antoniazzi Amarante", image: "https://avatars2.githubusercontent.com/u/7462237?s=200&v=4", messages: []}
+heck_seed = %{ name: "Fernando Sehnem Heck", image: "https://avatars1.githubusercontent.com/u/3910722?s=200&v=4", messages: []}
+matth_seed = %{ name: "Matthias Oliveira de Nunes", image: "https://avatars2.githubusercontent.com/u/6979113?s=200&v=4", messages: []}
 
 %Tiger{}
     |> Tiger.changeset(dani_seed)
