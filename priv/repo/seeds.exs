@@ -10,7 +10,7 @@
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
 
-alias TigerhoodApi.{Tigers.Tiger, Repo, Messages.Message}
+alias TigerhoodApi.{Tigers.Tiger, Messages.Message, Repo}
 
 # We are deleting the data here !!!!!!!>!!<!>!<><>!<
 Repo.all(Tiger)
@@ -19,6 +19,8 @@ Repo.all(Tiger)
 dani_seed = %{ name: "Daniel Antoniazzi Amarante", image: "https://avatars2.githubusercontent.com/u/7462237?s=200&v=4", messages: []}
 heck_seed = %{ name: "Fernando Sehnem Heck", image: "https://avatars1.githubusercontent.com/u/3910722?s=200&v=4", messages: []}
 matth_seed = %{ name: "Matthias Oliveira de Nunes", image: "https://avatars2.githubusercontent.com/u/6979113?s=200&v=4", messages: []}
+
+message = %{tiger_id: 1, author: "Bei bie", content: "hhauhahuauha"}
 
 %Tiger{}
     |> Tiger.changeset(dani_seed)
@@ -29,5 +31,9 @@ matth_seed = %{ name: "Matthias Oliveira de Nunes", image: "https://avatars2.git
     |> Repo.insert!()
 
 %Tiger{}
-|> Tiger.changeset(matth_seed)
-|> Repo.insert!()
+    |> Tiger.changeset(matth_seed)
+    |> Repo.insert!()
+
+%Message{}
+    |> Message.changeset(message)
+    |> Repo.insert!()

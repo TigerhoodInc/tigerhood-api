@@ -13,6 +13,7 @@ defmodule TigerhoodApiWeb.TigerView do
   def render("tiger.json", %{tiger: tiger}) do
     %{id: tiger.id,
       name: tiger.name,
-      image: tiger.image}
+      image: tiger.image,
+      messages: TigerhoodApiWeb.MessageView.render("index.json", %{messages: tiger.messages})}
   end
 end

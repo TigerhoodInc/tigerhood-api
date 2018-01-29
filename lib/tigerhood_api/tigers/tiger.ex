@@ -16,9 +16,7 @@ defmodule TigerhoodApi.Tigers.Tiger do
   @doc false
   def changeset(%Tiger{} = tiger, attrs) do
     tiger
-    |> Repo.preload(:messages)
     |> cast(attrs, [:name, :image])
-    |> cast_assoc(:messages)
     |> validate_required([:name, :image])
   end
 end

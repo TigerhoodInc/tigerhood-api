@@ -15,7 +15,7 @@ defmodule TigerhoodApi.Messages.Message do
   @doc false
   def changeset(%Message{} = message, attrs) do
     message
-      |> cast(attrs, [:author, :content])
+      |> cast(attrs, [:tiger_id, :author, :content])
       |> validate_required([:author, :content])
   end
 end
