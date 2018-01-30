@@ -20,8 +20,6 @@ dani_seed = %{ name: "Daniel Antoniazzi Amarante", image: "https://avatars2.gith
 heck_seed = %{ name: "Fernando Sehnem Heck", image: "https://avatars1.githubusercontent.com/u/3910722?s=200&v=4"}
 matth_seed = %{ name: "Matthias Oliveira de Nunes", image: "https://avatars2.githubusercontent.com/u/6979113?s=200&v=4"}
 
-message = %{tiger_id: 1, author: "Bei bie", content: "hhauhahuauha"}
-
 %Tiger{}
     |> Tiger.changeset(dani_seed)
     |> Repo.insert!()
@@ -32,8 +30,4 @@ message = %{tiger_id: 1, author: "Bei bie", content: "hhauhahuauha"}
 
 %Tiger{}
     |> Tiger.changeset(matth_seed)
-    |> Repo.insert!()
-
-%Message{}
-    |> Message.changeset(message)
     |> Repo.insert!()
